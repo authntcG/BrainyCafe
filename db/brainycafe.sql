@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Waktu pembuatan: 23 Jan 2022 pada 17.33
+-- Waktu pembuatan: 29 Jan 2022 pada 03.09
 -- Versi server: 5.7.33
 -- Versi PHP: 7.4.19
 
@@ -54,8 +54,17 @@ CREATE TABLE `detail_pesanan` (
 
 INSERT INTO `detail_pesanan` (`id_detail_pesanan`, `id_pesanan`, `id_menu`, `qty`, `ket`) VALUES
 ('DTP-001', 'PSN-001', 'MN-009', 1, ''),
+('DTP-0010', 'PSN-007', 'MN-009', 1, ''),
+('DTP-0011', 'PSN-008', 'MN-003', 1, ''),
+('DTP-0012', 'PSN-009', 'MN-0023', 1, ''),
 ('DTP-002', 'PSN-001', 'MN-0023', 1, ''),
-('DTP-003', 'PSN-001', 'MN-0017', 1, '');
+('DTP-003', 'PSN-001', 'MN-0017', 1, ''),
+('DTP-004', 'PSN-002', 'MN-0023', 10, ''),
+('DTP-005', 'PSN-003', 'MN-003', 1, ''),
+('DTP-006', 'PSN-004', 'MN-005', 1, ''),
+('DTP-007', 'PSN-005', 'MN-003', 2, ''),
+('DTP-008', 'PSN-006', 'MN-003', 1, ''),
+('DTP-009', 'PSN-007', 'MN-003', 1, '');
 
 -- --------------------------------------------------------
 
@@ -143,7 +152,15 @@ CREATE TABLE `pesanan` (
 --
 
 INSERT INTO `pesanan` (`id_pesanan`, `id_user`, `tgl_order`, `status_order`, `ket`) VALUES
-('PSN-001', 'USR-003', '2022-01-24 00:30:58', 3, NULL);
+('PSN-001', 'USR-003', '2022-01-24 00:30:58', 3, NULL),
+('PSN-002', 'USR-003', '2022-01-24 10:39:01', 3, NULL),
+('PSN-003', 'USR-003', '2022-01-24 10:46:31', 3, NULL),
+('PSN-004', 'USR-003', '2022-01-24 10:48:21', 3, NULL),
+('PSN-005', 'USR-003', '2022-01-24 10:53:19', 3, NULL),
+('PSN-006', 'USR-003', '2022-01-24 10:54:11', -1, NULL),
+('PSN-007', 'USR-003', '2022-01-27 11:27:41', -1, NULL),
+('PSN-008', 'USR-003', '2022-01-27 11:34:56', 3, NULL),
+('PSN-009', 'USR-003', '2022-01-27 11:35:23', -1, NULL);
 
 -- --------------------------------------------------------
 
@@ -168,7 +185,15 @@ CREATE TABLE `transaksi` (
 --
 
 INSERT INTO `transaksi` (`id_transaksi`, `id_user`, `id_pesanan`, `id_va`, `tgl_order`, `alamat`, `total`, `status_bayar`, `status_kirim`) VALUES
-('TRX-001', 'USR-003', 'PSN-001', 'VA-003', '2022-01-24 00:30:58', 'Jl. Jakarta No 110, Kota Bandung', 41000, 2, 2);
+('TRX-001', 'USR-003', 'PSN-001', 'VA-003', '2022-01-24 00:30:58', 'Jl. Jakarta No 110, Kota Bandung', 41000, 2, 2),
+('TRX-002', 'USR-003', 'PSN-002', 'VA-004', '2022-01-24 10:39:01', 'Bandung', 130000, 2, 2),
+('TRX-003', 'USR-003', 'PSN-003', 'VA-003', '2022-01-24 10:46:31', 'Bandung', 16000, 2, 2),
+('TRX-004', 'USR-003', 'PSN-004', 'VA-004', '2022-01-24 10:48:21', 'Bandung', 10000, 2, 2),
+('TRX-005', 'USR-003', 'PSN-005', 'VA-002', '2022-01-24 10:53:19', 'Jl. Jakarta No 100, Kota Bandung', 32000, 2, 2),
+('TRX-006', 'USR-003', 'PSN-006', 'VA-001', '2022-01-24 10:54:11', 'Bandung', 16000, -1, 0),
+('TRX-007', 'USR-003', 'PSN-007', 'VA-001', '2022-01-27 11:27:41', 'Jalan A.H. Nasution No 120, Kota Bandung', 28000, -1, 0),
+('TRX-008', 'USR-003', 'PSN-008', 'VA-003', '2022-01-27 11:34:56', 'bandung', 16000, 2, 2),
+('TRX-009', 'USR-003', 'PSN-009', 'VA-002', '2022-01-27 11:35:23', 'Bandung', 13000, -1, 0);
 
 -- --------------------------------------------------------
 
