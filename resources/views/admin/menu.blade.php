@@ -74,10 +74,10 @@
                                     
                                 </td>
                                 <td class="text-center">
-                                    <a href="/admin-area/menu/edit/{{ Crypt::encrypt($data -> id_menu)  }}">
+                                    <a href="/admin-area/menu/edit/{{ Crypt::encrypt($data -> id_menu) }}">
                                         <span class="badge badge-sm bg-gradient-warning">Edit</span>
                                     </a>
-                                    <a href="/admin-area/menu/delete/{{ Crypt::encrypt($data -> id_menu)  }}">
+                                    <a href="/admin-area/menu/delete/{{ Crypt::encrypt($data -> id_menu) }}">
                                         <span class="badge badge-sm bg-gradient-danger">Delete</span>
                                     </a>
                                 </td>
